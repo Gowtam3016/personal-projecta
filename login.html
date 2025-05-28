@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #000, #333);
+            color: #fff;
+            transition: background 1s ease-in-out;
+        }
+        body:hover {
+            background: linear-gradient(135deg, #333, #000);
+        }
+        .login-container {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            text-align: center;
+            animation: float 3s infinite ease-in-out alternate;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .login-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+        }
+        h2 {
+            margin-bottom: 1rem;
+            color: #ff0000;
+            transition: color 0.5s ease;
+        }
+        h2:hover {
+            color: #ff6666;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: red;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: darkred;
+            transform: scale(1.05);
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button class="btn">Login</button>
+    </div>
+</body>
+</html>
